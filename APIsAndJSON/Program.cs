@@ -1,10 +1,15 @@
-﻿namespace APIsAndJSON
+﻿using System.Threading.Tasks;
+using APIsAndJSON;
+
+
+namespace APIsAndJSON
 {
-    public class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World");
-        }
-    }
+	public class Program
+	{
+		public static async Task Main(string[] args)
+		{
+			RonVskanyeApi ronVsKanye = new RonVskanyeApi();
+			await ronVsKanye.StartConversationAsync();
+		}
+	}
 }
